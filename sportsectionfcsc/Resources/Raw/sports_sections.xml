@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<SportsFaculty>
+	
+	<Section id="1" name="Basketball" coach="John Doe" location="Gym A">
+		
+		<Schedule>
+			<Training day="Monday" time="10:00" />
+			<Training day="Wednesday" time="14:00" />
+		</Schedule>
+		
+		<Members>
+			<Student id="S1" name="Alice Smith" gender="Female" age="21" />
+			<Student id="S2" name="Bob Johnson" gender="Male" age="20" />
+			<Student id="S3" name="Charlie Adams" gender="Male" age="19" />
+			<Student id="S4" name="Diana Roberts" gender="Female" age="22" />
+			<Teacher id="T1" name="Prof. Emily Brown" gender="Female" age="45" />
+			<Teacher id="T2" name="Dr. Oliver Jones" gender="Male" age="50" />
+			<Student id="S5" name="Evan Miller" gender="Male" age="18" />
+			<Student id="S6" name="Fiona White" gender="Female" age="20" />
+			<Student id="S7" name="George King" gender="Male" age="23" />
+			<Student id="S8" name="Hannah Green" gender="Female" age="19" />
+		</Members>
+	</Section>
+
+	<Section id="2" name="Swimming" coach="Sarah Lee" location="Pool Area">
+		
+		<Schedule>
+			<Training day="Tuesday" time="09:00" />
+			<Training day="Thursday" time="11:00" />
+			<Training day="Saturday" time="15:00" />
+		</Schedule>
+		
+		<Members>
+			<Student id="S9" name="Ivan Black" gender="Male" age="21" />
+			<Student id="S10" name="Jack Hill" gender="Male" age="17" />
+			<Student id="S11" name="Karen Scott" gender="Female" age="22" />
+			<Student id="S12" name="Laura Adams" gender="Female" age="19" />
+			<Student id="S13" name="Mark Evans" gender="Male" age="20" />
+			<Teacher id="T3" name="Dr. Natalie Lewis" gender="Female" age="55" />
+			<Teacher id="T4" name="Prof. Chris Bell" gender="Male" age="60" />
+			<Student id="S14" name="Oliver Young" gender="Male" age="18" />
+			<Student id="S15" name="Paul Wilson" gender="Male" age="17" />
+			<Student id="S16" name="Quincy Allen" gender="Male" age="23" />
+		</Members>
+	</Section>
+
+	<Section id="3" name="Yoga" coach="Linda White" location="Room 203">
+		
+		<Schedule>
+			<Training day="Monday" time="08:00" />
+			<Training day="Friday" time="08:00" />
+		</Schedule>
+		
+		<Members>
+			<Student id="S17" name="Rebecca Fisher" gender="Female" age="21" />
+			<Student id="S18" name="Sam Brown" gender="Male" age="20" />
+			<Student id="S19" name="Tina Ford" gender="Female" age="19" />
+			<Student id="S20" name="Uma Knight" gender="Female" age="23" />
+			<Teacher id="T5" name="Dr. Victoria Wood" gender="Female" age="48" />
+			<Teacher id="T6" name="Prof. Walter Thomas" gender="Male" age="63" />
+			<Student id="S21" name="Xander Clarke" gender="Male" age="22" />
+			<Student id="S22" name="Yara Jenkins" gender="Female" age="18" />
+			<Student id="S23" name="Zara Lane" gender="Female" age="19" />
+			<Student id="S24" name="Alex Porter" gender="Male" age="21" />
+			<Student id="S25" name="Bryce Carter" gender="Male" age="19" />
+			<Student id="S26" name="Casey Cooper" gender="Male" age="23" />
+		</Members>
+	</Section>
+
+	<Section id="4" name="Tennis" coach="Robert Johnson" location="Court 1">
+		
+		<Schedule>
+			<Training day="Wednesday" time="13:00" />
+			<Training day="Saturday" time="10:00" />
+		</Schedule>
+		
+		<Members>
+			<Student id="S27" name="Derek Martinez" gender="Male" age="20" />
+			<Student id="S28" name="Elliot Reed" gender="Male" age="22" />
+			<Student id="S29" name="Faith Hamilton" gender="Female" age="19" />
+			<Teacher id="T7" name="Prof. George Baker" gender="Male" age="58" />
+			<Teacher id="T8" name="Dr. Helen Young" gender="Female" age="50" />
+			<Student id="S30" name="Ian Brooks" gender="Male" age="23" />
+			<Student id="S31" name="Jill Carter" gender="Female" age="21" />
+			<Student id="S32" name="Kara Hughes" gender="Female" age="20" />
+			<Student id="S33" name="Liam Ford" gender="Male" age="18" />
+			<Student id="S34" name="Mia Hall" gender="Female" age="19" />
+			<Student id="S35" name="Noah Fox" gender="Male" age="22" />
+			<Student id="S36" name="Olivia Burns" gender="Female" age="23" />
+			<Student id="S37" name="Piper Hayes" gender="Female" age="19" />
+		</Members>
+	</Section>
+
+	<Section id="5" name="Boxing" coach="Michael Brown" location="Gym A">
+		
+		<Schedule>
+			<Training day="Tuesday" time="16:00" />
+			<Training day="Thursday" time="18:00" />
+			<Training day="Saturday" time="09:00" />
+		</Schedule>
+		
+		<Members>
+			<Student id="S38" name="Quinn Bell" gender="Male" age="21" />
+			<Student id="S39" name="Rita Perez" gender="Female" age="19" />
+			<Student id="S40" name="Steve Wilson" gender="Male" age="22" />
+			<Teacher id="T9" name="Prof. Tracy Lane" gender="Female" age="47" />
+			<Teacher id="T10" name="Dr. Ursula Rice" gender="Female" age="52" />
+			<Student id="S41" name="Vince Stone" gender="Male" age="23" />
+			<Student id="S42" name="Will Young" gender="Male" age="20" />
+			<Student id="S43" name="Xenia Hughes" gender="Female" age="18" />
+			<Student id="S44" name="Yvonne Wright" gender="Female" age="19" />
+			<Student id="S45" name="Zachary White" gender="Male" age="21" />
+			<Student id="S46" name="Amy Collins" gender="Female" age="20" />
+			<Student id="S47" name="Brian Walker" gender="Male" age="22" />
+			<Student id="S48" name="Chloe Anderson" gender="Female" age="19" />
+			<Student id="S49" name="Daniel Edwards" gender="Male" age="23" />
+			<Student id="S50" name="Eva Griffin" gender="Female" age="17" />
+		</Members>
+		
+	</Section>
+	
+</SportsFaculty>

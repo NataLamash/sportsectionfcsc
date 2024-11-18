@@ -1,0 +1,200 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="sportsectionfcsc.MainPage">
+
+    <ScrollView>
+        
+            <Grid BackgroundColor="Black">
+                
+            <Grid.RowDefinitions>
+                
+                <RowDefinition Height="*" />
+                
+            </Grid.RowDefinitions>
+                
+            <Grid.ColumnDefinitions>
+                
+                <ColumnDefinition Width="2*" />
+                <ColumnDefinition Width="3*" />
+                
+            </Grid.ColumnDefinitions>
+            
+                <Grid BackgroundColor="Transparent" Grid.Column="0">
+
+                <Image Source="background1.jpg" Aspect="AspectFill" />
+                    
+                    <StackLayout VerticalOptions="Center" HorizontalOptions="Center" Padding="20">
+                        
+                        <Label Text="SPORT SECTIONS" TextColor="White" FontSize="35" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" />
+                        
+                        <BoxView HeightRequest="1" WidthRequest="200" BackgroundColor="White" Margin="0,10,0,20" />
+                        
+                        <Button x:Name="ChooseFileButton" Text="CHOOSE FILE" TextColor="Black" BackgroundColor="#bac9b8" FontAttributes="Bold" Padding="10" CornerRadius="20" Clicked="OnSelectFileClicked" />
+                        
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Margin="0,20,0,0">
+
+                        <Button x:Name="ExitButton" Text="Exit" TextColor="Black" BackgroundColor="#bac9b8" FontAttributes="Bold" WidthRequest="200" Padding="0" CornerRadius="20" Margin="0,10,0,0" Clicked="OnExitClicked" />
+                        <Button x:Name="SaveButton" Text="Save" TextColor="Black" BackgroundColor="#bac9b8" FontAttributes="Bold" WidthRequest="200" Padding="10" CornerRadius="20" Margin="10,10,0,0" Clicked="OnTransformToHtmlClicked" />
+                        
+                        </StackLayout>
+                        
+                    
+                    </StackLayout>
+                </Grid>
+
+                
+                <StackLayout Grid.Column="1" BackgroundColor="#32402f" Padding="20">
+                    
+                    <Label Text="FILTER" TextColor="White" FontSize="30" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" />
+                    
+                    <BoxView HeightRequest="1" BackgroundColor="White" Margin="0,10,0,20" />
+
+                    
+                    <Label Text="Choose parsing strategy" TextColor="White" FontSize="20" Margin="0,0,0,10" />
+                    
+                    <Frame BackgroundColor="#bac9b8" Padding="10" CornerRadius="20" Margin="0,0,0,20" Opacity="0.7">
+
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" Spacing="20">
+                            
+                            <RadioButton x:Name="DomRadioButton" Content="DOM" TextColor="White" CheckedChanged="OnStrategySelected" />
+                            <RadioButton x:Name="SaxRadioButton" Content="SAX" TextColor="White" CheckedChanged="OnStrategySelected" />
+                            <RadioButton x:Name="LinqRadioButton" Content="LINQ to XML" TextColor="White" IsChecked="True" CheckedChanged="OnStrategySelected" />
+                        
+                        </StackLayout>
+
+                    </Frame>
+
+                    
+                    <Label Text="Choose filter attributes" TextColor="White" FontSize="20" Margin="0,0,0,10" />
+                    
+                    <Grid ColumnDefinitions="*,*" RowSpacing="20" ColumnSpacing="20" Opacity="0.8">
+                        
+                        <Frame Grid.Column="0" BackgroundColor="#bac9b8" Padding="10" CornerRadius="20" VerticalOptions="FillAndExpand">
+                            
+                            <StackLayout>
+                                
+                                <Label Text="Members" TextColor="White" FontSize="18" />
+                                
+                                <Label Text="Name" TextColor="White" FontSize="16" Margin="0,10,0,5" />
+                                
+                                <Entry x:Name="NameEntry" Placeholder="Enter text" BackgroundColor="#ffffff" TextColor="Black" />
+                                
+                                <Label Text="Age" TextColor="White" FontSize="16" Margin="0,10,0,5" />
+                                
+                                <StackLayout Orientation="Horizontal" Spacing="10">
+                                    
+                                    <Label Text="from" TextColor="White" VerticalOptions="Center" />
+                                    <Entry x:Name="AgeFromEntry" WidthRequest="80" Placeholder="1-100" BackgroundColor="#ffffff" TextColor="Black" Keyboard="Numeric" />
+                                    <Label Text="to" TextColor="White" VerticalOptions="Center" />
+                                    <Entry x:Name="AgeToEntry" WidthRequest="80" Placeholder="1-100" BackgroundColor="#ffffff" TextColor="Black" Keyboard="Numeric" />
+                                
+                                </StackLayout>
+                                
+                                <Label Text="Gender" TextColor="White" FontSize="16" Margin="0,10,0,5" />
+                                
+                                <StackLayout Orientation="Horizontal" Spacing="20">
+                                    
+                                    <RadioButton x:Name="MaleRadioButton" Content="Male" TextColor="White" />
+                                    <RadioButton x:Name="FemaleRadioButton" Content="Female" TextColor="White" />
+                                    
+                                </StackLayout>
+                                
+                            </StackLayout>
+                            
+                        </Frame>
+
+                        
+                        <Frame Grid.Column="1" BackgroundColor="#bac9b8" Padding="10" CornerRadius="20" VerticalOptions="FillAndExpand">
+                            
+                            <StackLayout>
+                                
+                                <Label Text="Schedule" TextColor="White" FontSize="18" />
+                                
+                                <Label Text="Time" TextColor="White" FontSize="16" Margin="0,10,0,5" />
+                                
+                                <StackLayout Orientation="Horizontal" Spacing="10">
+                                    
+                                    <Label Text="from" TextColor="White" VerticalOptions="Center" />
+                                    <Entry x:Name="TimeFromEntry" WidthRequest="80" Placeholder="HH:MM" BackgroundColor="#ffffff" TextColor="Black" Keyboard="Numeric" />
+                                    <Label Text="to" TextColor="White" VerticalOptions="Center" />
+                                    <Entry x:Name="TimeToEntry" WidthRequest="80" Placeholder="HH:MM" BackgroundColor="#ffffff" TextColor="Black" Keyboard="Numeric" />
+                                
+                                </StackLayout>
+                               
+                                <Label Text="Day" TextColor="White" FontSize="16" Margin="0,10,0,5" />
+                                
+                                <StackLayout Orientation="Horizontal" Spacing="10">
+                                    
+                                    <CheckBox x:Name="MondayCheckBox" IsChecked="False" Color="#ffffff" />
+                                    <Label Text="Monday" TextColor="White" VerticalOptions="Center" />
+                                
+                                </StackLayout>
+                                
+                                <StackLayout Orientation="Horizontal" Spacing="10">
+                                    
+                                    <CheckBox x:Name="TuesdayCheckBox" IsChecked="False" Color="#ffffff" />
+                                    <Label Text="Tuesday" TextColor="White" VerticalOptions="Center" />
+                                
+                                </StackLayout>
+                                
+                                <StackLayout Orientation="Horizontal" Spacing="10">
+                                    
+                                    <CheckBox x:Name="WednesdayCheckBox" IsChecked="False" Color="#ffffff" />
+                                    <Label Text="Wednesday" TextColor="White" VerticalOptions="Center" />
+                                
+                                </StackLayout>
+                                
+                                <StackLayout Orientation="Horizontal" Spacing="10">
+                                    
+                                    <CheckBox x:Name="ThursdayCheckBox" IsChecked="False" Color="#ffffff" />
+                                    <Label Text="Thursday" TextColor="White" VerticalOptions="Center" />
+                                
+                                </StackLayout>
+                               
+                                <StackLayout Orientation="Horizontal" Spacing="10">
+                                    
+                                    <CheckBox x:Name="FridayCheckBox" IsChecked="False" Color="#ffffff" />
+                                    <Label Text="Friday" TextColor="White" VerticalOptions="Center" />
+                               
+                                </StackLayout>
+                                
+                                <StackLayout Orientation="Horizontal" Spacing="10">
+                                    
+                                    <CheckBox x:Name="SaturdayCheckBox" IsChecked="False" Color="#ffffff" />
+                                    <Label Text="Saturday" TextColor="White" VerticalOptions="Center" />
+                                
+                                </StackLayout>
+                                
+                                <StackLayout Orientation="Horizontal" Spacing="10">
+                                    
+                                    <CheckBox x:Name="SundayCheckBox" IsChecked="False" Color="#ffffff" />
+                                    <Label Text="Sunday" TextColor="White" VerticalOptions="Center" />
+                                
+                                </StackLayout>
+                                
+                            </StackLayout>
+                            
+                        </Frame>
+                        
+                    </Grid>
+
+                    
+                    <BoxView HeightRequest="1" BackgroundColor="White" Margin="0,20,0,20" />
+
+                    
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Spacing="20">
+
+                    <Button x:Name="SearchButton" Text="Search" TextColor="Black" BackgroundColor="#bac9b8" FontAttributes="Bold" WidthRequest="200" Padding="10" CornerRadius="20" Clicked="OnSearchClicked" />
+                    <Button x:Name="ClearButton" Text="Clear" TextColor="Black" BackgroundColor="#bac9b8" FontAttributes="Bold" WidthRequest="200" Padding="10" CornerRadius="20" Clicked="OnClearClicked" />
+                    
+                    </StackLayout>
+                
+                </StackLayout>
+            
+            </Grid>
+        
+    </ScrollView>
+
+    </ContentPage>
+
